@@ -1,5 +1,5 @@
-from .module1 import function1
-# from .. import module3
+# Tests if module2 correctly imports from a sibling/parent module
+from package2.subpackage1.subpackage2.module2 import function3
 
-function1()
-# module3.function1()
+def test_relative_import():
+    assert function3() == "Function 1 from module3"
